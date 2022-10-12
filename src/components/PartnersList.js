@@ -16,7 +16,7 @@ function PartnersList(props) {
   return (
     <>
       <SearchBar key={0}/>
-      <ul className="m-0 p-0">
+      <ul className="m-0 p-0 accordion" id="partners-list">
       {
         partners ? (partners.map((partner) => {
           return (
