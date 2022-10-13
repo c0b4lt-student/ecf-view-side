@@ -7,11 +7,20 @@ function GymsList(props) {
   const [gyms, setGyms] = useState(null);
   const [filterActive, setFilterActive] = useState('Toute');
 
-  useEffect(() => {
-    axios.get('https://ecf-decembre-2022.herokuapp.com/?page=front/gyms')
+  function handleChange(filter) {
+    axios.get('https://ecf-decembre-2022.herokuapp.com/?page=front/gyms/' + filter)
       .then(response => {
         setGyms(response.data);
       })
+  }
+
+  useEffect(() => {
+    if (!gyms) {
+      axios.get('https://ecf-decembre-2022.herokuapp.com/?page=front/gyms')
+        .then(response => {
+          setGyms(response.data);
+        })
+    }
   }, []);
 
   return (
