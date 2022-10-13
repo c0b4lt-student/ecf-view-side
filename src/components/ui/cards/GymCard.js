@@ -23,7 +23,7 @@ function GymCard(props) {
         <div id={"collapse" + id} className="accordion-collapse collapse" aria-labelledby={"heading" + id}
              data-bs-parent="#gyms-list">
           <div>
-            <PermsPanel type="gym">{gym}</PermsPanel>
+            <PermsPanel type="gym" my_id={id}>{gym}</PermsPanel>
           </div>
         </div>
       </li>

@@ -7,6 +7,7 @@ import PermsPanel from "../PermsPanel";
 function PartnerCard(props) {
   const partner = props.children
   const id = partner.id_partner;
+
   return (
     <>
       <li>
@@ -21,7 +22,7 @@ function PartnerCard(props) {
         <div id={"collapse" + id} className="accordion-collapse collapse" aria-labelledby={"heading" + id}
              data-bs-parent="#partners-list">
           <div>
-            <PermsPanel type="partner">{partner}</PermsPanel>
+            <PermsPanel type="partner" my_id={id}>{partner}</PermsPanel>
           </div>
         </div>
       </li>

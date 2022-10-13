@@ -3,12 +3,14 @@ import axios from "axios";
 import switch_on from "../../assets/img/switchOn.svg";
 import switch_off from "../../assets/img/switchOff.svg";
 import "../../css/switch-icn.css";
+import {NavLink} from "react-router-dom";
 
 function PermsPanel(props) {
   const user = props.children;
 
   const [globalPerms, setGlobalPerms] = useState(null);
-  const [perms, setPerms] = useState(null)
+  const [perms, setPerms] = useState(null);
+
   useEffect(() => {
     axios.get('https://ecf-decembre-2022.herokuapp.com/?page=front/perms')
       .then (response => {
@@ -33,7 +35,7 @@ function PermsPanel(props) {
   }, []);
 
   return (
-      <div className="accordion-body bg-dark-secondary w-75 h-25 m-auto mb-3 rounded p-0">
+      <div className="accordion-body bg-dark-secondary w-75 h-25 m-auto mb-3 rounded p-0 d-flex flex-column">
         <ul className="m-0 p-0" id="perms-list">
           {
             globalPerms ? (globalPerms.map((globalPerm) => {
@@ -62,6 +64,12 @@ function PermsPanel(props) {
             })) : ''
           }
         </ul>
+        <NavLink
+          to={'/' + props.type + '/'}
+          state={{my_user: props.children}}
+          type="button"
+          className="nav-link bg-succes rounded w-50 align-self-center">
+          ...</NavLink>
       </div>
   );
 }
