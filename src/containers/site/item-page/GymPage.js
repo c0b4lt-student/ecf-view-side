@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useLocation} from "react-router-dom";
-import HeaderGoSport from "../../components/ui/HeaderGoSport";
+import HeaderGoSport from "../../../components/ui/HeaderGoSport";
 import axios from "axios";
-import {resetFirstInputPolyfill} from "web-vitals/dist/modules/lib/polyfills/firstInputPolyfill";
+import ButtonCard from "../../../components/ui/cards/ButtonCard";
 
 function GymPage(props) {
   let location = useLocation();
@@ -41,6 +41,8 @@ function GymPage(props) {
         <div className="d-flex justify-content-between">
           <p className="h3">Active</p><p className="align-self-center h3">{gym.is_active_gym ? 'OUI' : 'NON'}</p>
         </div>
+
+        <ButtonCard path="/new-gym" item={gym} />
       </div>
     </>
   ) : '';
@@ -91,6 +93,7 @@ function GymPage(props) {
         <div className="d-flex justify-content-between">
           <p className="h3">Actif</p><p className="h3 align-self-center">{partner.is_actif_partner ? 'OUI' : 'NON'}</p>
         </div>
+        <ButtonCard path="/new-partner" item={partner}>Modifier le partenaire</ButtonCard>
       </div>
     </>
   ) : '';
