@@ -20,8 +20,8 @@ function PartnerCard(props) {
         </div>
         <div id={"collapse" + id} className="accordion-collapse collapse" aria-labelledby={"heading" + id}
              data-bs-parent="#partners-list">
-          <div className="accordion-body bg-dark-secondary w-75 h-25 m-auto mb-3 rounded d-flex flex-column">
-            <PermsPanel type="partner" id_item={id}/>
+          <div>
+            <PermsPanel type="partner">{partner}</PermsPanel>
           </div>
         </div>
       </li>
