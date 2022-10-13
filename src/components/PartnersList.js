@@ -31,10 +31,3 @@ function PartnersList(props) {
 
 export default PartnersList;
 
-/*{
-         partners.map((partner) => {
-           return (
-             <PartnerCard>{partner}</PartnerCard>
-           );
-         })
-       } */
