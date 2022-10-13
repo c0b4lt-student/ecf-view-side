@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import SearchBar from "./ui/SearchBar";
-import PartnerCard from "./ui/PartnerCard";
+import PartnerCard from "./ui/cards/PartnerCard";
 import axios from "axios";
 
 function PartnersList(props) {

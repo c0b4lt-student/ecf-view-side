@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import SearchBar from "./ui/SearchBar";
-import GymCard from "./ui/GymCard";
+import GymCard from "./ui/cards/GymCard";
 import axios from "axios";
 
 function GymsList(props) {

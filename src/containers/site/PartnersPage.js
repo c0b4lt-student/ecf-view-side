@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import AddCard from "../../components/ui/AddCard";
+import ButtonCard from "../../components/ui/cards/ButtonCard";
 import HeaderGoSport from "../../components/ui/HeaderGoSport";
 import PartnersList from "../../components/PartnersList";
 
@@ -11,7 +11,7 @@ function PartnersPage(props) {
   return (
     <main>
       <HeaderGoSport>Partenaires</HeaderGoSport>
-      <AddCard>Ajouter un partenaire</AddCard>
+      <ButtonCard>Ajouter un partenaire</ButtonCard>
       <PartnersList />
     </main>
   );

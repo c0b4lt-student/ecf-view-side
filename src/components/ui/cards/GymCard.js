@@ -1,8 +1,8 @@
 import React from 'react';
-import green_light from '../../assets/img/active_light.gif';
-import red_light from "../../assets/img/unactive_light.gif";
-import '../../css/led.css';
-import PermsPanel from "./PermsPanel";
+import green_light from '../../../assets/img/active_light.gif';
+import red_light from "../../../assets/img/unactive_light.gif";
+import '../../../css/led.css';
+import PermsPanel from "../PermsPanel";
 
 function GymCard(props) {
   const gym = props.children

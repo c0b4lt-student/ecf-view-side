@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
 import HeaderGoSport from "../../components/ui/HeaderGoSport";
+import ButtonCard from "../../components/ui/cards/ButtonCard";
+import PermsList from "../../components/PermsList";
 
 function PermsPage(props) {
   useEffect(() => {
@@ -9,7 +11,8 @@ function PermsPage(props) {
   return (
     <main>
       <HeaderGoSport>Permissions</HeaderGoSport>
-      Liste des permissions
+      <ButtonCard>Ajouter une permission</ButtonCard>
+      <PermsList />
     </main>
   );
 }
