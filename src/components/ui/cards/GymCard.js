@@ -7,6 +7,7 @@ import PermsPanel from "../PermsPanel";
 function GymCard(props) {
   const gym = props.children
   const id = gym.id_gym;
+
   return (
     <>
       <li>
