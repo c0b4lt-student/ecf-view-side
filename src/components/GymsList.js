@@ -25,7 +25,7 @@ function GymsList(props) {
 
   return (
     <>
-      <SearchBar key={0} />
+      <SearchBar key={0} handleChange={handleChange}/>
       <div className="dropdown-center d-flex align-content-center m-auto mt-2">
         <button className="btn btn-secondary dropdown-toggle w-75 m-auto" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
