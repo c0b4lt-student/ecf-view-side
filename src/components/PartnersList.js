@@ -6,17 +6,25 @@ import axios from "axios";
 function PartnersList(props) {
   const [partners, setPartners] = useState(null);
   const [filterActive, setFilterActive] = useState('Tous');
-
-  useEffect(() => {
-    axios.get('https://ecf-decembre-2022.herokuapp.com/?page=front/partners')
+  function handleSearch(filter) {
+    axios.get('https://ecf-decembre-2022.herokuapp.com/?page=front/partners/' + filter)
       .then(response => {
         setPartners(response.data);
       })
+  }
+
+  useEffect(() => {
+    if (!partners) {
+      axios.get('https://ecf-decembre-2022.herokuapp.com/?page=front/partners')
+        .then(response => {
+          setPartners(response.data);
+        })
+    }
   }, []);
 
   return (
     <>
-      <SearchBar key={0}/>
+      <SearchBar key={0} handleChange={handleSearch} />
       <div className="dropdown-center d-flex align-content-center m-auto mt-2">
         <button className="btn btn-secondary dropdown-toggle w-75 m-auto" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
